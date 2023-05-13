@@ -972,6 +972,11 @@ private JFrame frame;
             JOptionPane.showMessageDialog(frame,"Customer Contact number is required","Warning",JOptionPane.WARNING_MESSAGE);
             return;
         }
+        if(!Pattern.matches("[0-9]+",jtxtCphone.getText()))
+                {
+                    JOptionPane.showMessageDialog(frame,"Contact number should contain only digits","Warning",JOptionPane.WARNING_MESSAGE);
+                    return;
+                }
         if(jtxtCphone.getText().length() != 10)
         {
             JOptionPane.showMessageDialog(frame,"Customer Contact number should be 10 digits","Warning",JOptionPane.WARNING_MESSAGE);
